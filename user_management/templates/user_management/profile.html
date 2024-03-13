@@ -3,51 +3,78 @@
 {% block title %}
     Profile - Room AI
 {% endblock %}
+
 {% block content %}
-<div class="container">
-    <div class="profile-content">
-        <div class="profile-picture"></div>
-        <h2>Welcome, {{ user.username }}!</h2>
-        <p>Email: {{ user.email }}</p>
-        <p>First Name: {{ user.first_name }}</p>
-        <p>Last Name: {{ user.last_name }}</p>
-        <p>Joined since: {{ user.date_joined }}</p>
-        <p>Birth day: {{ user.date_of_birth }}</p>
-    </div>
+<div class="content">
+
+    <h2>Welcome, {{ user.username }}</h2>
+    <p id="current-date"></p>
+    <div class="container">
+        
+        <div class="profile-content">
+            <div class="profile-picture"></div>
+                <img src="#">
+            </div>
+            <div class="profile-details">
+                <h2>{{ user.username }}</h2>
+                <p>Email: {{ user.email }}</p>
+                <p>First Name: {{ user.first_name }}</p>
+                <p>Last Name: {{ user.last_name }}</p>
+                <p>Joined since: {{ user.date_joined }}</p>
+                <p>Birth day: {{ user.date_of_birth }}</p>
+            </div>
+            
+        </div>
+    <div class="section2">
         <div class="history-image">
             <h3>Your Design History</h3>
-            <p>ahjkgrkbskdfbkjxfgbnsdnjfgbjknfgb</p>
-            <p>syedfbgkbskritbgkdfgb</p>
-            <div class="clearfix">
-                <div class="img-container">
-                <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-            </div>
-            <div class="clearfix">
-                <div class="img-container">
-                <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-                <div class="img-container">
-                    <img src="{% static 'user_management/css/ImageDisplay.png' %}" alt="Italy" style="width:100%">
-                </div>
-            </div>
-        </div>
-        </div>
-        
+            <p>ahjkgrkbskdfbkjxfgbnsdnjfgbjknfgbsadgyibakjsbergkjaskedbgjshbdf</p>
 
-    {% endblock %}
+            <div class="clearfix">
+                <div class="img-container">
+                    <img src="" alt="Italy" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Italy" style="width:100%">
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="Italy" style="width:100%">
+                            </div>
+                            <div class="img-container">
+                                <img src="" alt="Italy" style="width:100%">
+                                </div>
+            </div>
+            <div class="clearfix">
+                <div class="img-container">
+                <img src="" alt="Italy" style="width:100%">
+                </div>
+                <div class="img-container">
+                    <img src="" alt="Italy" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Italy" style="width:100%">
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="Italy" style="width:100%">
+                            </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+<script>
+    var currentDate = new Date();
+
+    // Format the date as desired (e.g., "March 15, 2024")
+    var formattedDate = currentDate.toLocaleDateString('en-US', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+
+    // Display the formatted date in the <p> tag
+    document.getElementById("current-date").textContent = formattedDate;
+</script>
+{% endblock %} 

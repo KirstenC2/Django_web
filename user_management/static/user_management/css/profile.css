@@ -2,12 +2,143 @@ body {
     font-family: 'Nunito', sans-serif; /* Use Nunito font */
     margin: 0;
     background-image: linear-gradient(118.68deg, rgba(250, 111, 64, 0.1) -23.45%, rgba(211, 201, 233, 0.2) 25.94%, rgba(248, 248, 249, 0.4) 75.33%);
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
+    display:block;
+    margin-bottom: 250px;
+    
     min-height: 100vh; /* Take up at least the full viewport height */
 }
+/* styles.css */
+.content{
+    width:88%;
+    margin:auto;
+}
+p{
 
-.navbar {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    /* Zh n Zh  B i Pearl/400 */
+    color: #959595;
+
+}
+
+
+.container {
+    
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #2C1E49;
+
+} 
+h2{
+    font-size: 25.5px;
+    
+}
+
+.container .profile-content{
+    padding-top: 150px;
+    display:flex;
+    width: 92%;
+    margin:auto;
+    align-items: baseline;
+    margin-bottom:-80px;
+    
+}
+
+.profile-details{
+
+    
+    padding-left: 30px ;
+    padding-top: 80px;
+    padding-bottom: 25px;
+    background-color: #D3C9E9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.profile-picture {
+    background-color: #942d2d;/* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: 50%; /* To make it a circle */
+    width: 140px; /* Adjust as needed */
+    height: 140px; /* Adjust as needed */
+    float: left;
+
+    
+}
+.section2{
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+  
+.history-image{
+    width: 95%;
+    margin:auto;
+    margin-top: 80px;
+    padding-top: 40px;
+    height:600px;
+
+}
+
+
+.history-image p{
+
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    /* Christalle/500 */
+    color: #2C1E49;
+    opacity: 0.5;
+    /* Ömer C. */
+}
+
+.history-image h3{
+
+
+    font-weight: 700;
+    font-size: 21.4px;
+    line-height: 29px;
+
+    /* Christalle/500 */
+    color: #2C1E49;
+
+
+}
+
+
+
+
+.clearfix {
+    display: flex; /* Use flexbox to control spacing */
+    height: 260px;
+    background-color: #2C1E49;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-container {
+    width: 220px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 9px;
+    
+    margin-right: 10px; /* Add right margin for spacing */
+    background-color: #D3C9E9;
+}
+
+.img-container:last-child {
+    margin-right: 0; /* Remove right margin for the last child */
+}
+  
+  .navbar {
     display: flex;
     justify-content: space-between; /* Align items to the right */
     align-items: center;
