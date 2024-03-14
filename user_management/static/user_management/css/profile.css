@@ -53,7 +53,7 @@ h2{
     padding-left: 30px ;
     padding-top: 80px;
     padding-bottom: 25px;
-    background-color: #D3C9E9;
+    background-color: #fff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -71,7 +71,7 @@ h2{
     
 }
 .section2{
-    background-color: antiquewhite;
+    background-color: #fff;
     border-radius: 10px;
 }
   
@@ -144,13 +144,16 @@ h2{
     align-items: center;
     padding: 10px 20px;
     border: 1px solid #D3C9E9;
+
     overflow: hidden;
     color: #943535;
+
     max-height: 114px; /* Set maximum height */
 }
 
 .navbar .logo {
     display: flex;
+    margin-left:75px;
     align-items: center;
 }
 
@@ -203,3 +206,90 @@ h2{
 .navbar form button:hover::after {
     visibility: visible; /* Show the line on hover */
 }
+
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile screens */
+    body {
+        margin: 0; /* Adjust margin for mobile screens */
+    }
+    .content{
+        width:100%;
+        margin:auto;
+    }
+    .container {
+        margin: 0 auto; /* Center the container horizontally */
+        width: 100%; /* Adjust width for mobile screens */
+    }
+    .section2{
+        width:95%;
+        margin:auto;
+    }
+    .profile-content {
+        padding-top: 100px; /* Adjust padding for mobile screens */
+
+    }
+
+    .profile-picture {
+        width: 100px; /* Adjust size for mobile screens */
+        height: 100px; /* Adjust size for mobile screens */
+        margin: auto; /* Center the profile picture on mobile screens */
+    }
+
+    .profile-details {
+        padding-top: 20px; /* Adjust padding for mobile screens */
+    }
+    .history-image {
+        height: 805px;
+        
+        margin-top: 60px; /* Adjust margin for mobile screens */
+    }
+
+    .history-image p,
+    .history-image h3 {
+        font-size: 16px; /* Adjust font size for mobile screens */
+    }
+
+    .clearfix {
+        display: grid;
+        grid-template-columns: repeat(2, 0.3fr); /* 2 columns */
+        grid-auto-rows: 120px; /* Row height */
+        grid-gap: 10px; /* Adjust gap between grid items */
+        
+    }
+    
+
+    .img-container {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        width: 100%; /* Take up full width of grid cell */
+        height: 100%; /* Take up full height of grid cell */
+ 
+    }
+
+    .indent{
+        margin-left:25px;
+    }
+    
+
+
+    .img-container img {
+        max-width: 80px; /* Adjust maximum width of images */
+        max-height: 80px; /* Adjust maximum height of images */
+    }
+
+    .navbar .logo {
+        display: flex;
+
+
+    }
+    
+    .navbar .logo img {
+        max-height: 100%;
+        margin-right: 10px;
+    }
+    .navbar .nav-links {
+        display: none; /* Hide navigation links on mobile screens */
+    }
+}
+

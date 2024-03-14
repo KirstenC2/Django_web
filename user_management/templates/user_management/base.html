@@ -16,9 +16,10 @@
             <p>STYLY</p>
         </div>
         <div class="nav-links">
-            <a href="/">Room AI</a>
-            <a href="#" id="home-link" class="{% if request.path == '/accounts/profile/' %}active{% endif %}">Images Bank</a>
+
+            
             <a href="#" id="ai-designer-link" class="{% if 'ai_designer' in request.path %}active{% endif %}">Generate</a>
+            <a href="#" id="priceplan-link" class="{% if 'price_plan' in request.path %}active{% endif %}">Pricing</a>
             <a href="#" id="profile-link" class="{% if 'profile' in request.path %}active{% endif %}">Profile</a>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
@@ -42,18 +43,17 @@
 
             }
     
-            // Function to load home data
-            function loadHomeData() {
-                $('#page-content').load('/path/to/home.html');
-            }
-    
             // Function to load AI designer data
             function loadAIDesignerData() {
                 $('#page-content').load('/path/to/ai_designer.html');
             }
+            function loadPricePlanData() {
+                $('#page-content').load('{% url "price_plan"%}');
+
+            }
     
             // Click event for profile link
-            $('#profile-link').on('click', function(event) {
+            $('#priceplan-link').on('click', function(event) {
                 event.preventDefault(); // Prevent the default behavior of the link
                 loadProfileData();
             });
@@ -65,9 +65,9 @@
             });
     
             // Click event for home link
-            $('#home-link').on('click', function(event) {
+            $('#priceplan-link').on('click', function(event) {
                 event.preventDefault(); // Prevent the default behavior of the link
-                loadHomeData();
+                loadPricePlanData();
             });
     
             // Initial load

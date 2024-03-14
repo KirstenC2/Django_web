@@ -102,6 +102,9 @@ def google_oauth_callback(request):
 def user_homepage(request):
     return render(request, 'user_management/profile.html')
 
+def priceplan(request):
+    return render(request, 'user_management/priceplan.html')
+
 
 def profile(request):
     # Retrieve all images uploaded by the current user
